@@ -7,7 +7,7 @@ services:
     volumes:
       - "./myshare:/home/testssloutput.json"
     environment:
-       URI: "10.223.227.77:8443"
+       URI: "example.com"
        FILEOUTPUT: "--jsonfile /home/testssloutput.json"
        #TESTS: "--std --protocols --server_defaults --headers --vulnerable"
     healthcheck:
