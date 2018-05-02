@@ -1,0 +1,21 @@
+version: '2.1'
+services:
+  testsslsh:
+    image: testssl.sh
+    container_name: testssl.sh
+    volumes:
+      - "./myshare:/home/testssloutput.json"
+    environment:
+       URI: "10.223.227.77:8443"
+       FILEOUTPUT: "--jsonfile /home/testssloutput.json"
+       #TESTS: "--std --protocols --server_defaults --headers --vulnerable"
+    healthcheck:
+      test: "exit 0"
+      #  to check every 1 min and 30 sec or so that the script is done within 5 minutes:
+      interval: 1m30s
+      timeout: 5m
+      retries: 5
+            
+volumes:
+  myshare:
+    driver: local
