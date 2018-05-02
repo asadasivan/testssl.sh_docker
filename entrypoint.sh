@@ -1,16 +1,4 @@
 #!/bin/bash
-: '
-/*
- * @File: entrypoint.sh
- * @Author: Arunkumar Sadasivan
- * @Date: 02/01/2018
- * @Description: This script is used to pass arguments provided by the docker run command to invoke 
-                 the python script (audit.py) via command line arguments
- * @Usage: 1. docker run -e "URI=10.223.227.77:8443" -e "PRODUCT=DMA" -e "VERSION=10.0" -e "REPORTTYPE=json" -it --rm -v $(pwd)/report:/report guidelines_automation
-           2. docker run -e "URI=10.223.227.77:8443" -e "PRODUCT=DMA" -e "VERSION=10.0" -e "REPORTTYPE=html" -it --rm -v $(pwd)/report:/report guidelines_automation
-           3. docker run -e "URI=10.223.227.77:8443" -e "PRODUCT=DMA" -e "VERSION=10.0" -e "MULTIPLEREPORT=true" -it --rm -v $(pwd)/report:/report guidelines_automation
- */
-'
 
 arguments=""
 firsttime=true
