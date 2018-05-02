@@ -1,7 +1,8 @@
 version: '2.1'
 services:
   testsslsh:
-    image: testssl.sh
+    build:
+       dockerfile: Dockerfile
     container_name: testssl.sh
     volumes:
       - "./myshare:/home/testssloutput.json"
