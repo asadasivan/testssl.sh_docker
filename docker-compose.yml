@@ -7,11 +7,8 @@ services:
     image: testssl.sh  
     container_name: testssl.sh
     volumes:
-      - "./myshare:/home/testssloutput.json"
-    environment:
-       URI: "example.com"
-       FILEOUTPUT: "--jsonfile /home/testssloutput.json"
-       #TESTS: "--std --protocols --server_defaults --headers --vulnerable"
+      - "./myshare:/home/tmp"
+    command:  --jsonfile "/home/tmp/testssloutput.json" "10.223.227.93:8443"
     healthcheck:
       test: "exit 0"
       #  to check every 1 min and 30 sec or so that the script is done within 5 minutes:
