@@ -1,0 +1,10 @@
+# ignore everything
+*
+
+# do NOT ignore entrypoint.sh
+!entrypoint.sh
+!script.py
+
+# do NOT ignore everything in the following directory. Uncomment if you want to include the below folders into docker image.
+#!config/
+#!src
